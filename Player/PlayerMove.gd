@@ -31,11 +31,6 @@ func _physics_process(_delta) -> void:
 	
 	var grounded = is_on_floor()
 	y_velocity -= GRAVITY
-	
-	if Input.is_action_just_pressed("jump"):
-		print("grounded : " + str(grounded))
-		print("Input.is_action_just_pressed(\"jump\") : " + str(Input.is_action_just_pressed("jump")))
-	
 	if grounded and Input.is_action_just_pressed("jump"):
 		y_velocity = jump_force
 	

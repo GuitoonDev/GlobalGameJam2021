@@ -10,5 +10,4 @@ func _ready() -> void:
 func _input(event) -> void:
 	if event is InputEventMouseMotion:
 		rotation_degrees.x -= mouse_sensitivity * event.relative.y
-		
 		rotation_degrees.x = clamp(rotation_degrees.x, rotation_x_min, rotation_x_max)
