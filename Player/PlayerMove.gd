@@ -1,6 +1,10 @@
 extends KinematicBody
 
 export var move_speed := 5.0
+	
+func _input(event):
+	if event is InputEventMouseMotion:
+		rotation_degrees.y -= $Camera.mouse_sensitivity * event.relative.x
 
 func _physics_process(delta) -> void:
 	var move_delta := Vector3()
