@@ -5,7 +5,7 @@ export(float, 0.5, 20.0, 0.1) var y_velocity := 5.0
 export(float, 10.0, 50.0, 0.1) var jump_force := 30.0
 export(float, 10.0, 50.0, 0.1) var max_fall_speed := 30.0
 
-const GRAVITY := 0.88
+const GRAVITY := 0.6
 	
 func _input(event):
 	if event is InputEventMouseMotion:
