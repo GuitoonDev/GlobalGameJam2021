@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/PlayerCamera.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerMove.gd" type="Script" id=2]
+[ext_resource path="res://GPE/Dynamics/Flashlight/Flashlight.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -21,3 +22,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 current = true
 script = ExtResource( 1 )
 mouse_sensitivity = 0.25
+
+[node name="Flashlight" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33, 0.163, -0.592 )
+visible = false
