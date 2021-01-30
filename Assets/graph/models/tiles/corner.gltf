@@ -1,0 +1,100 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.4.40",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "corner"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.008",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 40,
+            "max" : [
+                0.5000000596046448,
+                2,
+                0.5000000596046448
+            ],
+            "min" : [
+                -0.5,
+                0,
+                -0.5
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 40,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 40,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 60,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 480
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 320,
+            "byteOffset" : 960
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 120,
+            "byteOffset" : 1280
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1400,
+            "uri" : "data:application/octet-stream;base64,FfCiPgAAAAAAAAA/FfCiPgAAAAAAAAA/FfCiPgAAAAAAAAA/FfCiPgAAAEAAAAA/FfCiPgAAAEAAAAA/FfCiPgAAAEAAAAA/FfCiPgAAAAAAAAC/FfCiPgAAAAAAAAC/FfCiPgAAAAAAAAC/FfCiPgAAAEAAAAC/FfCiPgAAAEAAAAC/FfCiPgAAAEAAAAC/AAAAPwAAAAAAAAC/AAAAPwAAAAAAAAC/AAAAPwAAAEAAAAC/AAAAPwAAAEAAAAC/AAAAPwAAAAAAAAA/AAAAPwAAAAAAAAA/AAAAPwAAAEAAAAA/AAAAPwAAAEAAAAA/////vgAAAAAW8KI+////vgAAAAAW8KI+////vgAAAAAW8KI+////vgAAAEAW8KI+////vgAAAEAW8KI+////vgAAAEAW8KI+AAAAPwAAAAAU8KI+AAAAPwAAAAAU8KI+AAAAPwAAAAAU8KI+AAAAPwAAAEAU8KI+AAAAPwAAAEAU8KI+AAAAPwAAAEAU8KI+AQAAPwAAAAAAAAA/AQAAPwAAAAAAAAA/AQAAPwAAAEAAAAA/AQAAPwAAAEAAAAA/AAAAvwAAAAABAAA/AAAAvwAAAAABAAA/AAAAvwAAAEABAAA/AAAAvwAAAEABAAA/AACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAvwAAAAAAAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AACAvwAAAAAAAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAACAvwAAAADnDTC0AACAswAAAAAAAIC/AAAAAAAAgL8AAACAAACAvwAAAADnDTC0AACAswAAAAAAAIC/AAAAAAAAgD8AAACAAACAswAAAAAAAIC/AAAAAAAAgL8AAACAAACAPwAAAADnDbC0AACAswAAAAAAAIC/AAAAAAAAgD8AAACAAACAPwAAAADnDbC0AAAAAAAAgL8AAACAAACAPwAAAADnDbC0AAAAAAAAgD8AAACAAACAPwAAAADnDbC0AACAvwAAAADnDTC0AAAAAAAAgL8AAACAAACAvwAAAADnDTC0AAAAAAAAgD8AAACAAADAPgAAgD8AAAA+AACAPgAAwD4AAAAAAAAgPwAAgD8AACA/AAAAAAAAYD8AAIA+AADAPgAAQD8AAAA+AAAAPwAAwD4AAEA/AAAgPwAAQD8AACA/AABAPwAAYD8AAAA/AACAPgAAAD8AAMA+AAAgPwAAID8AACA/AABAPwAAAD8AAIA+AACAPgAAwD4AAAA+AAAgPwAAAD4AAEA/AACAPgAAwD4AAAAAAADAPgAAgD8AAAA+AACAPgAAID8AAAAAAAAgPwAAgD8AAGA/AACAPgAAwD4AAEA/AAAAPgAAAD8AAMA+AABAPwAAID8AAEA/AABgPwAAAD8AACA/AABAPwAAgD4AAAA/AADAPgAAID8AAEA/AAAAPwAAID8AACA/AADAPgAAAD4AAIA+AACAPgAAID8AAAA+AABAPwAAgD4AAAMACQAAAAkABgARABIABAARAAQAAgAPAAsABQAPAAUAEwAHAAwAEAAHABAAAQAIAAoADgAIAA4ADQAVABgAHQAVAB0AGgAkACYAFwAkABcAFAAiAB4AGQAiABkAJwAbACAAJQAbACUAFgAcAB8AIwAcACMAIQA="
+        }
+    ]
+}

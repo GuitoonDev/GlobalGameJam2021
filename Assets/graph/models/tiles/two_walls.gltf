@@ -1,0 +1,100 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.4.40",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "two_walls"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.013",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 40,
+            "max" : [
+                0.5,
+                2,
+                0.5
+            ],
+            "min" : [
+                -0.5,
+                0,
+                -0.4999999403953552
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 40,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 40,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 60,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 480
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 320,
+            "byteOffset" : 960
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 120,
+            "byteOffset" : 1280
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1400,
+            "uri" : "data:application/octet-stream;base64,F/CivgAAAAD+//++F/CivgAAAAD+//++F/CivgAAAAD+//++F/CivgAAAED+//++F/CivgAAAED+//++F/CivgAAAED+//++E/CivgAAAAAAAAA/E/CivgAAAAAAAAA/E/CivgAAAAAAAAA/E/CivgAAAEAAAAA/E/CivgAAAEAAAAA/E/CivgAAAEAAAAA//P//vgAAAAAAAAA//P//vgAAAAAAAAA//P//vgAAAEAAAAA//P//vgAAAEAAAAA/AAAAvwAAAAD8//++AAAAvwAAAAD8//++AAAAvwAAAED8//++AAAAvwAAAED8//++FfCiPgAAAAAAAAA/FfCiPgAAAAAAAAA/FfCiPgAAAAAAAAA/FfCiPgAAAEAAAAA/FfCiPgAAAEAAAAA/FfCiPgAAAEAAAAA/FfCiPgAAAAD+//++FfCiPgAAAAD+//++FfCiPgAAAAD+//++FfCiPgAAAED+//++FfCiPgAAAED+//++FfCiPgAAAED+//++AAAAPwAAAAD8//++AAAAPwAAAAD8//++AAAAPwAAAED8//++AAAAPwAAAED8//++/P//PgAAAAAAAAA//P//PgAAAAAAAAA//P//PgAAAEAAAAA//P//PgAAAEAAAAA/7Q2wtAAAAAAAAIC/AAAAAAAAgL8AAACAAACAPwAAAAABAAC07Q2wtAAAAAAAAIC/AAAAAAAAgD8AAACAAACAPwAAAAABAAC0AAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AACAPwAAAAABAAC0AAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAACAPwAAAAABAAC0AAAAAAAAgL8AAACAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAACA7Q2wtAAAAAAAAIC/AAAAAAAAgL8AAACA7Q2wtAAAAAAAAIC/AAAAAAAAgD8AAACAAACAvwAAAAAAAACAAAAAAAAAgL8AAACAAAAAAAAAAAD//38/AACAvwAAAAAAAACAAAAAAAAAAAD//38/AAAAAAAAgD8AAACAAACAvwAAAAAAAACAAAAAAAAAgL8AAACA6Q2wNAAAAAAAAIC/AACAvwAAAAAAAACAAAAAAAAAgD8AAACA6Q2wNAAAAAAAAIC/AAAAAAAAgL8AAACA6Q2wNAAAAAAAAIC/AAAAAAAAgD8AAACA6Q2wNAAAAAAAAIC/AAAAAAAAgL8AAACAAAAAAAAAAAD//38/AAAAAAAAAAD//38/AAAAAAAAgD8AAACAAADAPgAAAAAAAAA+AACAPgAAwD4AAIA/AAAgPwAAAAAAAGA/AACAPgAAID8AAIA/AAAAPgAAAD8AAMA+AABAPwAAwD4AAEA/AAAgPwAAQD8AAGA/AAAAPwAAID8AAEA/AACAPgAAAD8AAMA+AAAgPwAAID8AACA/AABAPwAAAD8AAMA+AAAAPgAAgD4AAIA+AAAgPwAAAD4AAEA/AACAPgAAwD4AAIA/AAAAPgAAgD4AAMA+AAAAAAAAID8AAIA/AAAgPwAAAAAAAGA/AACAPgAAwD4AAEA/AAAAPgAAAD8AAMA+AABAPwAAID8AAEA/AABgPwAAAD8AACA/AABAPwAAgD4AAAA/AADAPgAAID8AAEA/AAAAPwAAID8AACA/AACAPgAAgD4AAMA+AAAAPgAAID8AAAA+AABAPwAAgD4CAAUACwACAAsACAAQABIAAwAQAAMAAAAPAAoABAAPAAQAEwAGAAwAEQAGABEAAQAHAAkADgAHAA4ADQAUABcAHQAUAB0AGgAlACYAGAAlABgAFgAiAB4AGQAiABkAJwAbACAAJAAbACQAFQAcAB8AIwAcACMAIQA="
+        }
+    ]
+}
