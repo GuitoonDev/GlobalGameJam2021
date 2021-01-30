@@ -6,10 +6,14 @@ export(float, 10.0, 50.0, 0.1) var jump_force := 30.0
 export(float, 10.0, 50.0, 0.1) var max_fall_speed := 30.0
 
 const GRAVITY := 0.6
-	
+
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= $Camera.mouse_sensitivity * event.relative.x
+
+func _process(delta):
+	if Input.is_action_just_released("interact"):
+		get_tree().call_group("Interactable", "Interact", self)
 
 func _physics_process(_delta) -> void:
 	var move_delta := Vector3()
