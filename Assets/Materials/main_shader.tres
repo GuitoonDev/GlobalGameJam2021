@@ -110,7 +110,7 @@ operator = 3
 default_input_values = [ 0, 0.0, 1, 0.03 ]
 
 [sub_resource type="VisualShaderNodeScalarConstant" id=37]
-constant = 0.4
+constant = 0.3
 
 [sub_resource type="VisualShaderNodeBooleanUniform" id=38]
 uniform_name = "blackOut"
@@ -152,19 +152,19 @@ default_input_values = [ 0, false, 1, 0.0, 2, 1.0 ]
 
 [sub_resource type="VisualShaderNodeVectorCompose" id=51]
 
-[sub_resource type="VisualShaderNodeScalarSwitch" id=54]
-default_input_values = [ 0, false, 1, 1.0, 2, 2.0 ]
+[sub_resource type="VisualShaderNodeScalarSwitch" id=52]
+default_input_values = [ 0, false, 1, 1.0, 2, 1.0 ]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=52]
+[sub_resource type="VisualShaderNodeScalarOp" id=53]
 default_input_values = [ 0, 0.0, 1, 0.865 ]
 operator = 4
 
-[sub_resource type="VisualShaderNodeTexture" id=53]
+[sub_resource type="VisualShaderNodeTexture" id=54]
 texture = ExtResource( 2 )
 
 [resource]
 code = "shader_type spatial;
-render_mode depth_draw_alpha_prepass, specular_schlick_ggx;
+render_mode depth_draw_alpha_prepass, cull_disabled, specular_schlick_ggx;
 
 uniform bool blackIn;
 uniform vec4 color : hint_color;
@@ -234,7 +234,7 @@ void fragment() {
 	bool n_out39p0 = torchIsOn;
 
 // Scalar:56
-	float n_out56p0 = 0.400000;
+	float n_out56p0 = 0.300000;
 
 // ScalarOp:55
 	float n_in55p1 = 0.03000;
@@ -347,7 +347,7 @@ void fragment() {
 
 // ScalarSwitch:70
 	float n_in70p1 = 1.00000;
-	float n_in70p2 = 2.00000;
+	float n_in70p2 = 1.00000;
 	float n_out70p0;
 	if(n_out68p0 > 0.0 ? true : false)
 	{
@@ -437,7 +437,8 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -745, 217.75 )
+graph_offset = Vector2( -3035.99, -353.528 )
+modes/cull = 2
 modes/depth_draw = 3
 nodes/fragment/0/position = Vector2( 340, 420 )
 nodes/fragment/2/node = SubResource( 11 )
@@ -452,9 +453,9 @@ nodes/fragment/6/node = SubResource( 41 )
 nodes/fragment/6/position = Vector2( -2920, 1240 )
 nodes/fragment/7/node = SubResource( 51 )
 nodes/fragment/7/position = Vector2( -2520, 1240 )
-nodes/fragment/8/node = SubResource( 52 )
+nodes/fragment/8/node = SubResource( 53 )
 nodes/fragment/8/position = Vector2( -2700, 1180 )
-nodes/fragment/9/node = SubResource( 53 )
+nodes/fragment/9/node = SubResource( 54 )
 nodes/fragment/9/position = Vector2( -2260, 960 )
 nodes/fragment/10/node = SubResource( 1 )
 nodes/fragment/10/position = Vector2( -1540, 500 )
@@ -554,6 +555,6 @@ nodes/fragment/67/node = SubResource( 49 )
 nodes/fragment/67/position = Vector2( -960, 600 )
 nodes/fragment/68/node = SubResource( 50 )
 nodes/fragment/68/position = Vector2( -1460, 100 )
-nodes/fragment/70/node = SubResource( 54 )
+nodes/fragment/70/node = SubResource( 52 )
 nodes/fragment/70/position = Vector2( -60, 380 )
 nodes/fragment/connections = PoolIntArray( 2, 0, 0, 8, 5, 0, 4, 0, 3, 0, 4, 1, 4, 0, 6, 0, 6, 0, 8, 0, 6, 2, 7, 1, 7, 0, 9, 0, 12, 0, 14, 0, 17, 0, 15, 1, 16, 0, 20, 1, 11, 0, 19, 1, 21, 0, 20, 0, 15, 0, 22, 0, 22, 0, 18, 0, 18, 0, 23, 0, 23, 0, 19, 0, 9, 0, 26, 1, 25, 0, 26, 0, 14, 0, 13, 0, 10, 0, 13, 1, 7, 0, 2, 0, 8, 0, 7, 0, 19, 0, 0, 9, 20, 0, 15, 0, 31, 0, 32, 2, 27, 0, 33, 0, 34, 0, 35, 0, 33, 1, 34, 1, 33, 0, 34, 0, 35, 0, 36, 0, 30, 0, 31, 0, 36, 0, 30, 0, 28, 0, 49, 0, 49, 0, 51, 0, 51, 0, 36, 1, 52, 0, 51, 1, 34, 0, 53, 1, 53, 0, 52, 0, 55, 0, 32, 1, 56, 0, 55, 0, 56, 0, 32, 0, 62, 0, 64, 1, 13, 0, 64, 2, 58, 0, 64, 0, 64, 0, 61, 0, 62, 0, 65, 1, 13, 0, 65, 2, 57, 0, 65, 0, 65, 0, 61, 1, 59, 0, 66, 0, 66, 0, 63, 0, 60, 0, 67, 0, 67, 0, 63, 1, 39, 0, 68, 0, 68, 0, 61, 2, 32, 0, 68, 1, 68, 0, 63, 2, 61, 0, 0, 0, 63, 0, 0, 1, 37, 0, 0, 4, 68, 0, 70, 0, 70, 0, 0, 3 )

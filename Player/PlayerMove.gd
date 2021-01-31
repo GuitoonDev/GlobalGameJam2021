@@ -1,4 +1,6 @@
 extends KinematicBody
+signal toggle_torch(isOn);
+
 
 export(float, 0.5, 20.0, 0.1) var move_speed := 5.0
 export(float, 0.5, 20.0, 0.1) var y_velocity := 5.0
@@ -7,6 +9,12 @@ export(float, 10.0, 50.0, 0.1) var max_fall_speed := 30.0
 
 const GRAVITY := 0.6
 
+var canUse_torch = false;
+var torch_is_On = false;
+
+func _ready():
+	add_to_group("Player");
+
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= $Camera.mouse_sensitivity * event.relative.x
@@ -14,6 +22,13 @@ func _input(event):
 func _process(delta):
 	if Input.is_action_just_released("interact"):
 		get_tree().call_group("Interactable", "Interact", self)
+	if  canUse_torch and Input.is_action_just_pressed("toggle_flashlight"):
+		torch_is_On = true;
+		emit_signal("toggle_torch",torch_is_On)
+	if canUse_torch and Input.is_action_just_released("toggle_flashlight"):
+		torch_is_On = false;
+		emit_signal("toggle_torch",torch_is_On)
+	
 
 func _physics_process(_delta) -> void:
 	var move_delta := Vector3()
@@ -42,3 +57,14 @@ func _physics_process(_delta) -> void:
 		y_velocity = -0.1
 	
 	y_velocity = max(y_velocity, -max_fall_speed)
+
+func toggleAllChildrenVisibility(node,visibility):
+	for child in node.get_children():
+		child.visible=true;
+		if child.get_child_count() > 0:
+			toggleAllChildrenVisibility(child,visibility)
+	
+func grant_Torch():
+	canUse_torch = true;
+	toggleAllChildrenVisibility(self,true);
+	
