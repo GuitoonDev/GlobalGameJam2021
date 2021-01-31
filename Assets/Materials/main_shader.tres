@@ -207,13 +207,13 @@ default_input_values = [ 0, false, 1, 1.0, 2, 1.0 ]
 operator = 2
 
 [sub_resource type="VisualShaderNodeColorConstant" id=68]
-constant = Color( 0.0132974, 0.609191, 0.7995, 1 )
+constant = Color( 0.0692902, 0.487937, 0.933594, 1 )
 
 [sub_resource type="VisualShaderNodeVectorOp" id=69]
 operator = 2
 
 [sub_resource type="VisualShaderNodeScalarConstant" id=70]
-constant = 1.0
+constant = 0.33
 
 [sub_resource type="VisualShaderNodeTexture" id=71]
 texture = ExtResource( 2 )
@@ -451,7 +451,7 @@ void fragment() {
 	vec3 n_out94p0 = n_out30p0 + vec3(n_out77p0);
 
 // Scalar:88
-	float n_out88p0 = 1.000000;
+	float n_out88p0 = 0.330000;
 
 // VectorOp:87
 	vec3 n_out87p0 = n_out94p0 * vec3(n_out88p0);
@@ -488,7 +488,7 @@ void fragment() {
 	}
 
 // Color:85
-	vec3 n_out85p0 = vec3(0.013297, 0.609191, 0.799500);
+	vec3 n_out85p0 = vec3(0.069290, 0.487937, 0.933594);
 	float n_out85p1 = 1.000000;
 
 // VectorOp:84
@@ -571,6 +571,7 @@ void light() {
 
 }
 "
+graph_offset = Vector2( 2, 542 )
 modes/cull = 2
 modes/depth_draw = 3
 nodes/fragment/0/position = Vector2( 1180, 440 )
