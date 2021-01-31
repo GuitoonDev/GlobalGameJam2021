@@ -71,4 +71,5 @@ stream = ExtResource( 12 )
 [node name="ui_credit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 [connection signal="pressed" from="ColorRect/jouer" to="." method="go_to_scene"]
+[connection signal="pressed" from="ColorRect/credit" to="." method="go_to_credit"]
 [connection signal="pressed" from="ColorRect/quitter" to="." method="exit_button"]

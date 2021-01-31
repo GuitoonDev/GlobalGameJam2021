@@ -7,3 +7,7 @@ func go_to_scene():
 
 func exit_button():
 	get_tree().quit()
+
+
+func go_to_credit():
+	get_tree().change_scene("res://UI/CreditOverlay.tscn")
