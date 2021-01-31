@@ -24,8 +24,11 @@ radius = 0.25
 height = 0.64
 
 [node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00356987, 1.19209e-07, 0.00131023 )
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 2 )
-jump_force = 18.0
+jump_force = 8.0
 max_fall_speed = 20.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

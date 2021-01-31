@@ -3,13 +3,13 @@ extends KinematicBody
 signal toggle_torch(isOn);
 
 export(float, 0.5, 20.0, 0.1) var move_speed := 5.0
-export(float, 0.5, 20.0, 0.1) var y_velocity := 5.0
-export(float, 10.0, 50.0, 0.1) var jump_force := 30.0
+export(float, 0.1, 20.0, 0.1) var y_velocity := 5.0
+export(float, 1.0, 50.0, 0.1) var jump_force := 30.0
 export(float, 10.0, 50.0, 0.1) var max_fall_speed := 30.0
 
 onready var footstep_sfx_player := $FootstepRandomSFXPlayer
 
-const GRAVITY := 0.6
+const GRAVITY := 0.75
 
 export var canUse_torch = false;
 var torch_is_On = false;
