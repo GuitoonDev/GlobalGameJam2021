@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/graph/UI/menu/jouer_button_pressed.png" type="Texture" id=1]
 [ext_resource path="res://Assets/graph/UI/menu/jouer_button_hover.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Assets/graph/UI/menu/credit_button.png" type="Texture" id=9]
 [ext_resource path="res://Assets/graph/UI/menu/credit_button_hover.png" type="Texture" id=10]
 [ext_resource path="res://Assets/graph/UI/menu/exit_button.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Audio/UI/FPG_Jingle_OS_01_01_Positive.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/UI/FPG_UI_OS_01_04_Positive.ogg" type="AudioStream" id=13]
 
 [node name="MainScreen" type="Control"]
 anchor_right = 1.0
@@ -62,5 +64,11 @@ texture_click_mask = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ui_play" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="ui_credit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
 [connection signal="pressed" from="ColorRect/jouer" to="." method="go_to_scene"]
 [connection signal="pressed" from="ColorRect/quitter" to="." method="exit_button"]

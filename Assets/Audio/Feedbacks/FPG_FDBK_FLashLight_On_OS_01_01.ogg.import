@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_FDBK_FLashLight_On_OS_01_01.ogg-2dcf69b611bd7c7986cf87b11c6c6b63.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Feedbacks/FPG_FDBK_FLashLight_On_OS_01_01.ogg"
+dest_files=[ "res://.import/FPG_FDBK_FLashLight_On_OS_01_01.ogg-2dcf69b611bd7c7986cf87b11c6c6b63.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

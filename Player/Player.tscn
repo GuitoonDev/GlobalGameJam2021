@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/PlayerCamera.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerMove.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_05.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_01.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_04.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/Feedbacks/FPG_FDBK_FLashLight_On_OS_01_01.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/Feedbacks/FPG_FDBK_FLashLight_Off_OS_01_01.ogg" type="AudioStream" id=11]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -39,3 +41,9 @@ script = ExtResource( 4 )
 audio_files = [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 7 ) ]
 is_loop = true
 delay_time = 0.1
+
+[node name="flash_on" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="flash_off" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
