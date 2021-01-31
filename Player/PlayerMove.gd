@@ -13,6 +13,7 @@ const GRAVITY := 0.6
 
 export var canUse_torch = false;
 var torch_is_On = false;
+var is_grounded_last_frame := false;
 
 func _ready():
 	add_to_group("Player");
@@ -62,13 +63,18 @@ func _physics_process(_delta) -> void:
 	var grounded = is_on_floor()
 	y_velocity -= GRAVITY
 	if grounded and Input.is_action_just_pressed("jump"):
+		$JumpRandomSFXPlayer.play()
 		y_velocity = jump_force
 	
 	if grounded and y_velocity <= 0:
 		y_velocity = -0.1
+		
+	if not is_grounded_last_frame and grounded:
+		$FallRandomSFXPlayer.play()
 	
 	y_velocity = max(y_velocity, -max_fall_speed)
-
+	is_grounded_last_frame = grounded
+	
 func grant_Torch():
 	canUse_torch = true;
 	$Camera/Flashlight.visible = true

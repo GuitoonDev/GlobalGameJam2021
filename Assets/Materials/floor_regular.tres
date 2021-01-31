@@ -10,3 +10,4 @@ shader_param/blackOut = null
 shader_param/torchIsOn = false
 shader_param/TransparentIn = false
 shader_param/TransparentOut = false
+shader_param/effectIn = null

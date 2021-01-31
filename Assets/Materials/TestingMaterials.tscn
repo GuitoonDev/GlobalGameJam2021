@@ -18,6 +18,7 @@ shader_param/blackOut = false
 shader_param/torchIsOn = true
 shader_param/TransparentIn = false
 shader_param/TransparentOut = true
+shader_param/effectIn = true
 
 [node name="Spatial" type="Spatial"]
 
