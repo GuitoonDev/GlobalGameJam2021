@@ -56,5 +56,6 @@ anims/Up = SubResource( 3 )
 
 [node name="door_frame" parent="." index="2" instance=ExtResource( 4 )]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="." index="3"]
 stream = ExtResource( 5 )
+unit_size = 5.0

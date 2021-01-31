@@ -24,7 +24,6 @@ func Activate():
 	#print("Button On")
 	.Activate()
 	$pressButton.play()
-	print("press")
 	emit_signal("button_toggle_press",activated)
 	
 func Deactivate():
