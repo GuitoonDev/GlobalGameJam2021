@@ -38,4 +38,5 @@ rect_scale = Vector2( 0.75, 0.75 )
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
+[connection signal="visibility_changed" from="." to="ScrollingCredit" method="_on_UserInterfaceCredit_visibility_changed"]
 [connection signal="pressed" from="TextureButton" to="ScrollingCredit" method="return_button"]

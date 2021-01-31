@@ -52,9 +52,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="ColorRect/credit"]
-wait_time = 0.191
-
 [node name="quitter" type="TextureButton" parent="ColorRect"]
 margin_left = 127.0
 margin_top = 347.0
@@ -74,7 +71,5 @@ stream = ExtResource( 12 )
 [node name="ui_credit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 [connection signal="pressed" from="ColorRect/jouer" to="." method="go_to_scene"]
-[connection signal="pressed" from="ColorRect/credit" to="ColorRect/credit/Timer" method="start" binds= [ -1.0 ]]
-[connection signal="pressed" from="ColorRect/credit" to="ui_credit" method="play" binds= [ 0.0 ]]
-[connection signal="timeout" from="ColorRect/credit/Timer" to="." method="go_to_credit"]
+[connection signal="pressed" from="ColorRect/credit" to="." method="go_to_credit"]
 [connection signal="pressed" from="ColorRect/quitter" to="." method="exit_button"]
