@@ -10,14 +10,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		self.paused = not paused
 		scene_tree.set_input_as_handled()
 
-
 func set_paused(value: bool) -> void:
 	paused = value
 	scene_tree.paused = value
 	pause_overlay.visible = value
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
-
+	
+	if value:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 func continue_button():
 	self.paused = not paused
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
