@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_UI_OS_01_08_Hover.ogg-a1dab785c6c5ea832247eb5ba4
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
