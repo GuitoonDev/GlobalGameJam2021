@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_UI_OS_01_04_Positive.ogg-86e5fd1f2138ad79670dabc
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

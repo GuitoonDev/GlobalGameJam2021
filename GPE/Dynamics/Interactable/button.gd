@@ -23,9 +23,11 @@ func Interact(p):
 func Activate():
 	#print("Button On")
 	.Activate()
+	$pressButton.play()
 	emit_signal("button_toggle_press",activated)
 	
 func Deactivate():
 	#print("Button Off")
 	.Deactivate()
+	$pressButton.play()
 	emit_signal("button_toggle_press",activated)

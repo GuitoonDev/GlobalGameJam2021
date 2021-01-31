@@ -11,7 +11,7 @@ onready var footstep_sfx_player := $FootstepRandomSFXPlayer
 
 const GRAVITY := 0.6
 
-var canUse_torch = false;
+export var canUse_torch = false;
 var torch_is_On = false;
 
 func _ready():
@@ -25,9 +25,11 @@ func _process(_delta):
 	if Input.is_action_just_released("interact"):
 		get_tree().call_group("Interactable", "Interact", self)
 	if  canUse_torch and Input.is_action_just_pressed("toggle_flashlight"):
+		$flash_on.play()
 		torch_is_On = true;
 		emit_signal("toggle_torch",torch_is_On)
 	if canUse_torch and Input.is_action_just_released("toggle_flashlight"):
+		$flash_off.play()
 		torch_is_On = false;
 		emit_signal("toggle_torch",torch_is_On)
 	
@@ -70,3 +72,4 @@ func _physics_process(_delta) -> void:
 func grant_Torch():
 	canUse_torch = true;
 	$Camera/Flashlight.visible = true
+	$grant_torch.play()

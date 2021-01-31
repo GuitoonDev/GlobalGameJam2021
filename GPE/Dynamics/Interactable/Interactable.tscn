@@ -2,8 +2,6 @@
 
 [ext_resource path="res://GPE/Dynamics/Interactable/Interactable.gd" type="Script" id=1]
 
-[node name="TriggerBox" type="Area"]
+[node name="TriggerBox" type="Spatial"]
 process_priority = 4
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
-gravity_vec = Vector3( 0, 0, 0 )
 script = ExtResource( 1 )

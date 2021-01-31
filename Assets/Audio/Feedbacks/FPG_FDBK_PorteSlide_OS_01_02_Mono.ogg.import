@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_FDBK_PorteSlide_OS_01_02_Mono.ogg-51aa40ba29b3a7
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

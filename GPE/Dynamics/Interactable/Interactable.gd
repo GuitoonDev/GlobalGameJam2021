@@ -1,4 +1,4 @@
-extends Area
+extends Spatial
 
 
 # Declare member variables here. Examples:
