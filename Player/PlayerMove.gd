@@ -25,9 +25,11 @@ func _process(_delta):
 	if Input.is_action_just_released("interact"):
 		get_tree().call_group("Interactable", "Interact", self)
 	if  canUse_torch and Input.is_action_just_pressed("toggle_flashlight"):
+		$flash_on.play()
 		torch_is_On = true;
 		emit_signal("toggle_torch",torch_is_On)
 	if canUse_torch and Input.is_action_just_released("toggle_flashlight"):
+		$flash_off.play()
 		torch_is_On = false;
 		emit_signal("toggle_torch",torch_is_On)
 	

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_Jingle_OS_01_01_Positive.ogg-4d8e5ad8f629702a600
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
