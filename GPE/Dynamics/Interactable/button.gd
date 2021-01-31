@@ -18,15 +18,17 @@ func Interact(p):
 	#var angle = global_transform.origin.dot(p.global_transform.origin)
 	#print(angle)
 	#if angle > 0:
-	$pressButton.play()
 	.Interact(p)
 
 func Activate():
 	#print("Button On")
 	.Activate()
+	$pressButton.play()
+	print("press")
 	emit_signal("button_toggle_press",activated)
 	
 func Deactivate():
 	#print("Button Off")
 	.Deactivate()
+	$pressButton.play()
 	emit_signal("button_toggle_press",activated)
