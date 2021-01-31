@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_UI_OS_01_11_scifi.ogg-8bea4f83487c12f6aca7aeff653ba731.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/UI/FPG_UI_OS_01_11_scifi.ogg"
+dest_files=[ "res://.import/FPG_UI_OS_01_11_scifi.ogg-8bea4f83487c12f6aca7aeff653ba731.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_UI_OS_01_05_Negative.ogg-3c05575a8d67e6fda1ef6a8328a845f9.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/UI/FPG_UI_OS_01_05_Negative.ogg"
+dest_files=[ "res://.import/FPG_UI_OS_01_05_Negative.ogg-3c05575a8d67e6fda1ef6a8328a845f9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

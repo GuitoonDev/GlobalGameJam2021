@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_UI_OS_01_08_Hover.ogg-a1dab785c6c5ea832247eb5ba404ccfb.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/UI/FPG_UI_OS_01_08_Hover.ogg"
+dest_files=[ "res://.import/FPG_UI_OS_01_08_Hover.ogg-a1dab785c6c5ea832247eb5ba404ccfb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

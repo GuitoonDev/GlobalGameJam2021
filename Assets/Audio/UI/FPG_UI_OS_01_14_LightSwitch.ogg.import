@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_UI_OS_01_14_LightSwitch.ogg-0567ebe200d3905ac7108fef839c5bd8.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/UI/FPG_UI_OS_01_14_LightSwitch.ogg"
+dest_files=[ "res://.import/FPG_UI_OS_01_14_LightSwitch.ogg-0567ebe200d3905ac7108fef839c5bd8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

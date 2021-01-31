@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_Foley_FTPS_OS_Jump_01_02.ogg-631866a7905de22e2e09a0f02331febe.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_Jump_01_02.ogg"
+dest_files=[ "res://.import/FPG_Foley_FTPS_OS_Jump_01_02.ogg-631866a7905de22e2e09a0f02331febe.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

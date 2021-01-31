@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_FDBK_PorteSlide_OS_01_02_Mono.ogg-51aa40ba29b3a794eb616e78be77261a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Feedbacks/FPG_FDBK_PorteSlide_OS_01_02_Mono.ogg"
+dest_files=[ "res://.import/FPG_FDBK_PorteSlide_OS_01_02_Mono.ogg-51aa40ba29b3a794eb616e78be77261a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
