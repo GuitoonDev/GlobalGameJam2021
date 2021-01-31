@@ -25,3 +25,8 @@ func continue_button():
 
 func exit_button():
 	get_tree().quit()
+
+
+func go_to_MainMenu():
+	self.paused = not paused
+	get_tree().change_scene("res://UI/MainScreen.tscn")

@@ -82,4 +82,5 @@ __meta__ = {
 "_editor_description_": ""
 }
 [connection signal="pressed" from="PauseOverlay/PauseMenu/Continue" to="." method="continue_button"]
+[connection signal="pressed" from="PauseOverlay/PauseMenu/MainMenu" to="." method="go_to_MainMenu"]
 [connection signal="pressed" from="PauseOverlay/PauseMenu/Exit" to="." method="exit_button"]
