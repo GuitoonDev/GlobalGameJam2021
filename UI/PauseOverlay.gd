@@ -33,5 +33,5 @@ func exit_button():
 func go_to_MainMenu():
 	$returnmenu.play()
 	self.paused = not paused
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_tree().change_scene("res://UI/MainScreen.tscn")
