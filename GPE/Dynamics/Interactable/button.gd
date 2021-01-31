@@ -14,15 +14,15 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func Interact(p):
-	var dist = transform.origin.distance_to(p.transform.origin);
-	#var b_ori = get_translation().basis.z
-	#var p_ori = (p.get_translation() - b_ori).normalized()
-	if dist <= max_dist :#and (acos(b_ori.dot(p_ori)) <= def2rad(60) ):
-		if activated:
-			Deactivate();
-		else:
-			Activate();
+#func Interact(p):
+#	var dist = transform.origin.distance_to(p.transform.origin);
+#	#var b_ori = get_translation().basis.z
+#	#var p_ori = (p.get_translation() - b_ori).normalized()
+#	if dist <= max_dist :#and (acos(b_ori.dot(p_ori)) <= def2rad(60) ):
+#		if activated:
+#			Deactivate();
+#		else:
+#			Activate();
 
 func Activate():
 	print("Button On")

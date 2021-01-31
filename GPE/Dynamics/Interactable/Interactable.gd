@@ -5,7 +5,7 @@ extends Area
 # var a = 2
 # var b = "text"
 export var activated = false;
-export var max_dist = 3.0;
+export var max_dist = 5.0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +19,7 @@ func _process(delta):
 	
 func Interact(p):
 	var dist = transform.origin.distance_to(p.transform.origin);
+	print(dist)
 	if dist <= max_dist:
 		if activated:
 			Deactivate();
