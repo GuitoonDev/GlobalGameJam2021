@@ -1,22 +1,35 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/graph/UI/paused.png" type="Texture" id=1]
 [ext_resource path="res://UI/ScrollingCredit.gd" type="Script" id=2]
+[ext_resource path="res://Assets/graph/UI/menu/credit_txt.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "scroll"
-length = 10.0
+length = 20.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("paused:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 491.208, 692.911 ), Vector2( 496.864, -48.1367 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("credit_txt:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 19.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 513.326, 1105.93 ), Vector2( 513.326, -500 ) ]
 }
 
 [node name="ScrollingCredit" type="Control"]
@@ -27,7 +40,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="credit_txt" type="Sprite" parent="."]
+position = Vector2( 513.326, -500 )
+texture = ExtResource( 3 )
+
 [node name="paused" type="Sprite" parent="."]
+visible = false
 position = Vector2( 496.864, -48.1367 )
 texture = ExtResource( 1 )
 
