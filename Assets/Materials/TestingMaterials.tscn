@@ -5,8 +5,6 @@
 [ext_resource path="res://GPE/Scripts/LightSwitch.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Materials/main_shader.tres" type="Shader" id=4]
 
-
-
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 5, 2, 5 )
 
@@ -14,12 +12,12 @@ size = Vector3( 5, 2, 5 )
 
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 4 )
-shader_param/blackIn = true
+shader_param/blackIn = false
 shader_param/color = Color( 0.917647, 0.917647, 0.917647, 1 )
 shader_param/blackOut = false
-shader_param/torchIsOn = false
-shader_param/TransparentIn = true
-shader_param/TransparentOut = false
+shader_param/torchIsOn = true
+shader_param/TransparentIn = false
+shader_param/TransparentOut = true
 
 [node name="Spatial" type="Spatial"]
 
