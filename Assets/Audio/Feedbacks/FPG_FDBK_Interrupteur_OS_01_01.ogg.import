@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_FDBK_Interrupteur_OS_01_01.ogg-41d9e2a9e87a4a71b
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

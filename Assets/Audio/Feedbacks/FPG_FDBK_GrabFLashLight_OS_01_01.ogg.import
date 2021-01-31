@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_FDBK_GrabFLashLight_OS_01_01.ogg-8e013661c17dd4d
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

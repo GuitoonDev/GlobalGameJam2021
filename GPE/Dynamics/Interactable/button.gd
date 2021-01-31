@@ -18,6 +18,7 @@ func Interact(p):
 	#var angle = global_transform.origin.dot(p.global_transform.origin)
 	#print(angle)
 	#if angle > 0:
+	$pressButton.play()
 	.Interact(p)
 
 func Activate():

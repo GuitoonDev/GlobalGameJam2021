@@ -11,7 +11,7 @@ onready var footstep_sfx_player := $FootstepRandomSFXPlayer
 
 const GRAVITY := 0.6
 
-var canUse_torch = false;
+export var canUse_torch = false;
 var torch_is_On = false;
 
 func _ready():
@@ -72,3 +72,4 @@ func _physics_process(_delta) -> void:
 func grant_Torch():
 	canUse_torch = true;
 	$Camera/Flashlight.visible = true
+	$grant_torch.play()
