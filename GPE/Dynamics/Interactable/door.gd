@@ -19,5 +19,7 @@ func _ready():
 func _on_TriggerBox_button_toggle_press(toggle):
 	if toggle:
 		anim_player.play("Down")
+		$AudioStreamPlayer.play()
 	else:
 		anim_player.play("Up")
+		$AudioStreamPlayer.play()
