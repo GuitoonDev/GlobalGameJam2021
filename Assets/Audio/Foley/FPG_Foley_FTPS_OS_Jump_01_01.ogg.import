@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_Foley_FTPS_OS_Jump_01_01.ogg-cd076e56458f736cb38
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

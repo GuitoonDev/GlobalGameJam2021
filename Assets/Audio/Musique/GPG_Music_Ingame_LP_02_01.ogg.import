@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GPG_Music_Ingame_LP_02_01.ogg-03296afe45f62534df5d56419cb5c9d1.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Musique/GPG_Music_Ingame_LP_02_01.ogg"
+dest_files=[ "res://.import/GPG_Music_Ingame_LP_02_01.ogg-03296afe45f62534df5d56419cb5c9d1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
