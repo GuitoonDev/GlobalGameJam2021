@@ -191,7 +191,7 @@ texture = ExtResource( 2 )
 
 [resource]
 code = "shader_type spatial;
-render_mode depth_draw_alpha_prepass, specular_schlick_ggx;
+render_mode depth_draw_alpha_prepass, cull_disabled, specular_schlick_ggx;
 
 uniform bool blackIn;
 uniform vec4 color : hint_color;
@@ -490,7 +490,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -2354.01, 52.3279 )
+modes/cull = 2
 modes/depth_draw = 3
 nodes/fragment/0/position = Vector2( 340, 420 )
 nodes/fragment/2/node = SubResource( 11 )
