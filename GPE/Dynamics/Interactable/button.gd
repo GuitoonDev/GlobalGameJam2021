@@ -14,22 +14,18 @@ func _ready():
 #func _process(delta):
 #	pass
 
-#func Interact(p):
-#	var dist = transform.origin.distance_to(p.transform.origin);
-#	#var b_ori = get_translation().basis.z
-#	#var p_ori = (p.get_translation() - b_ori).normalized()
-#	if dist <= max_dist :#and (acos(b_ori.dot(p_ori)) <= def2rad(60) ):
-#		if activated:
-#			Deactivate();
-#		else:
-#			Activate();
+func Interact(p):
+	#var angle = global_transform.origin.dot(p.global_transform.origin)
+	#print(angle)
+	#if angle > 0:
+	.Interact(p)
 
 func Activate():
-	print("Button On")
+	#print("Button On")
 	.Activate()
 	emit_signal("button_toggle_press",activated)
 	
 func Deactivate():
-	print("Button Off")
+	#print("Button Off")
 	.Deactivate()
 	emit_signal("button_toggle_press",activated)
