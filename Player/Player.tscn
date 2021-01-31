@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/PlayerCamera.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerMove.gd" type="Script" id=2]
 [ext_resource path="res://GPE/Dynamics/Flashlight/Flashlight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GPE/Nodes/RandomSFXPlayer.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_03.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_02.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_05.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_01.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_03_04.ogg" type="AudioStream" id=9]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -18,12 +24,18 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.626598, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.311322, 0 )
 current = true
 far = 500.0
 script = ExtResource( 1 )
 mouse_sensitivity = 0.25
 
 [node name="Flashlight" parent="Camera" instance=ExtResource( 3 )]
-transform = Transform( 0.790735, -0.101548, 0.0665249, 0.110662, 0.783193, -0.119847, -0.0499145, 0.127661, 0.78817, 0.33, -0.424886, -0.282816 )
+transform = Transform( 0.790735, -0.101548, 0.0665249, 0.110662, 0.783193, -0.119847, -0.0499145, 0.127661, 0.78817, 0.327, -0.268, -0.283 )
 visible = false
+
+[node name="FootstepRandomSFXPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 4 )
+audio_files = [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 7 ) ]
+is_loop = true
+delay_time = 0.1

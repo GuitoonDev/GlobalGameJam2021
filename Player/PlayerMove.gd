@@ -1,11 +1,13 @@
 extends KinematicBody
-signal toggle_torch(isOn);
 
+signal toggle_torch(isOn);
 
 export(float, 0.5, 20.0, 0.1) var move_speed := 5.0
 export(float, 0.5, 20.0, 0.1) var y_velocity := 5.0
 export(float, 10.0, 50.0, 0.1) var jump_force := 30.0
 export(float, 10.0, 50.0, 0.1) var max_fall_speed := 30.0
+
+onready var footstep_sfx_player := $FootstepRandomSFXPlayer
 
 const GRAVITY := 0.6
 
@@ -19,7 +21,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= $Camera.mouse_sensitivity * event.relative.x
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_released("interact"):
 		get_tree().call_group("Interactable", "Interact", self)
 	if  canUse_torch and Input.is_action_just_pressed("toggle_flashlight"):
@@ -42,6 +44,13 @@ func _physics_process(_delta) -> void:
 		move_delta.x += 1
 
 	move_delta = move_delta.normalized()
+	
+	if move_delta != Vector3.ZERO and not footstep_sfx_player.is_playing:
+		footstep_sfx_player.play()
+	elif move_delta == Vector3.ZERO:
+		footstep_sfx_player.stop()
+		
+	
 	move_delta = move_delta.rotated(Vector3(0, 1, 0), rotation.y)
 	move_delta *= move_speed
 	move_delta.y = y_velocity
@@ -58,13 +67,6 @@ func _physics_process(_delta) -> void:
 	
 	y_velocity = max(y_velocity, -max_fall_speed)
 
-func toggleAllChildrenVisibility(node,visibility):
-	for child in node.get_children():
-		child.visible=true;
-		if child.get_child_count() > 0:
-			toggleAllChildrenVisibility(child,visibility)
-	
 func grant_Torch():
 	canUse_torch = true;
-	toggleAllChildrenVisibility(self,true);
-	
+	$Camera/Flashlight.visible = true
