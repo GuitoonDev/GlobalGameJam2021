@@ -1,5 +1,4 @@
 extends Spatial
 
-func _process(_delta):
-	if Input.is_action_pressed("exit"):
-		get_tree().quit()
+func _on_Area_body_entered(body):
+	$CanvasLayer/UserInterfaceCredit.visible = true
