@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player/PlayerCamera.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerMove.gd" type="Script" id=2]
@@ -12,6 +12,12 @@
 [ext_resource path="res://Assets/Audio/Feedbacks/FPG_FDBK_FLashLight_On_OS_01_01.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Audio/Feedbacks/FPG_FDBK_FLashLight_Off_OS_01_01.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Assets/Audio/Feedbacks/FPG_FDBK_GrabFLashLight_OS_01_01.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_Jump_01_03.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_Jump_01_01.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_Jump_01_02.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_03.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_01.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_02.ogg" type="AudioStream" id=18]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -41,6 +47,16 @@ visible = false
 script = ExtResource( 4 )
 audio_files = [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 7 ) ]
 is_loop = true
+delay_time = 0.1
+
+[node name="JumpRandomSFXPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 4 )
+audio_files = [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 13 ) ]
+delay_time = 0.1
+
+[node name="FallRandomSFXPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 4 )
+audio_files = [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 16 ) ]
 delay_time = 0.1
 
 [node name="flash_on" type="AudioStreamPlayer" parent="."]
