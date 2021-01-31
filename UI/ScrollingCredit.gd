@@ -1,6 +1,6 @@
 extends Control
 
-func _ready():
+func _on_UserInterfaceCredit_visibility_changed():
 	$AnimationPlayer.play("scroll")
 
 

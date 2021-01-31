@@ -28,6 +28,8 @@ __meta__ = {
 }
 
 [node name="ScrollingCredit" parent="." instance=ExtResource( 1 )]
+[connection signal="visibility_changed" from="." to="ScrollingCredit" method="_on_UserInterfaceCredit_visibility_changed"]
+
 
 [node name="TextureButton" type="TextureButton" parent="."]
 anchor_left = 0.022
