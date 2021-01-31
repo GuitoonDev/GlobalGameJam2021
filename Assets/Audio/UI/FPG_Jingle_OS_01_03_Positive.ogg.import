@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_Jingle_OS_01_03_Positive.ogg-676cdb463b948e1db8761e16818150ec.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/UI/FPG_Jingle_OS_01_03_Positive.ogg"
+dest_files=[ "res://.import/FPG_Jingle_OS_01_03_Positive.ogg-676cdb463b948e1db8761e16818150ec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

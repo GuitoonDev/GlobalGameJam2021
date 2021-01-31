@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_UI_OS_01_02.ogg-d99befa30f80d3e76f4fea48cb55ae38.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/UI/FPG_UI_OS_01_02.ogg"
+dest_files=[ "res://.import/FPG_UI_OS_01_02.ogg-d99befa30f80d3e76f4fea48cb55ae38.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

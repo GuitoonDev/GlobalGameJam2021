@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FPG_FDBK_PushCube_LP_01_01.ogg-ba7f119da5fbe02e8c95250266c534ee.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Feedbacks/FPG_FDBK_PushCube_LP_01_01.ogg"
+dest_files=[ "res://.import/FPG_FDBK_PushCube_LP_01_01.ogg-ba7f119da5fbe02e8c95250266c534ee.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
