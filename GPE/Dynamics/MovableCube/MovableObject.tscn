@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Audio/Feedbacks/FPG_FDBK_PushCube_LP_01_01.ogg" type="AudioStream" id=1]
+[ext_resource path="res://GPE/Dynamics/MovableCube/MovableObject.gd" type="Script" id=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.35, 0.04, 0.35 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.25, 0.025, 0.25 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.5, 0.5, 0.5 )
+
+[node name="MovableObject" type="RigidBody"]
+mass = 11.86
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+linear_damp = 30.0
+angular_damp = 30.0
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+__meta__ = {
+"_editor_description_": "		"
+}
+
+[node name="StaticBody" type="StaticBody" parent="CollisionShape"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="CollisionShape/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.133634, 0 )
+shape = SubResource( 3 )
+
+[node name="EBox" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="EBox"]
+shape = SubResource( 4 )
+
+[node name="push_sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 1 )
+[connection signal="body_entered" from="EBox" to="." method="_on_EBox_body_entered"]

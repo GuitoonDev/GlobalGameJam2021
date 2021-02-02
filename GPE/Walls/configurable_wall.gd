@@ -6,7 +6,9 @@ enum wall_type{
 	Regular,
 	Persistent,
 	Fake,
-	Shadow
+	Shadow,
+	Phantom_Effect,
+	Regular_Effect
 }
 
 export (wall_type) var wt = wall_type.Regular;
@@ -26,6 +28,10 @@ func _ready():
 			wallMaterial = load("res://Assets/Materials/floor_fake.tres")
 		wall_type.Shadow:
 			wallMaterial = load("res://Assets/Materials/floor_shadow.tres")
+		wall_type.Phantom_Effect:
+			wallMaterial = load("res://Assets/Materials/floor_phantom_effect.tres")
+		wall_type.Regular_Effect:
+			wallMaterial = load("res://Assets/Materials/floor_regular_effect.tres")
 			
 	$wall.material_override = wallMaterial;
 	

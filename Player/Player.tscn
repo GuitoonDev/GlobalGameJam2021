@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/PlayerCamera.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerMove.gd" type="Script" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_03.ogg" type="AudioStream" id=16]
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_01.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_02.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Assets/graph/UI/interact_button_over.png" type="Texture" id=19]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -70,3 +71,29 @@ stream = ExtResource( 11 )
 
 [node name="grant_torch" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
+
+[node name="Ebutton" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Ebutton"]
+visible = false
+texture = ExtResource( 19 )
+offset = Vector2( 512, 500 )
+
+[node name="Ebutton_cube" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Ebutton_cube"]
+visible = false
+texture = ExtResource( 19 )
+offset = Vector2( 512, 500 )
+
+[node name="CheatTeleport" type="Spatial" parent="."]

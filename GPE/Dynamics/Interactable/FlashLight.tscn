@@ -5,3 +5,4 @@
 
 [node name="TriggerBox" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+max_dist = 7.5

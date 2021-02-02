@@ -1,26 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/ScrollingCredit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/graph/UI/menu/return_button.png" type="Texture" id=2]
 [ext_resource path="res://Assets/graph/UI/menu/return_button_pressed.png" type="Texture" id=3]
 [ext_resource path="res://Assets/graph/UI/menu/return_button_hover.png" type="Texture" id=4]
+[ext_resource path="res://Assets/graph/UI/menu/quit_button_pressed.png" type="Texture" id=5]
+[ext_resource path="res://Assets/graph/UI/menu/quit_button.png" type="Texture" id=6]
+[ext_resource path="res://Assets/graph/UI/menu/quit_button_hover.png" type="Texture" id=7]
+[ext_resource path="res://UI/CreditOverlay.gd" type="Script" id=8]
 
 [node name="UserInterfaceCredit" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CreditOverlay" type="ColorRect" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -512.0
-margin_top = -300.0
-margin_right = 512.0
-margin_bottom = 300.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0.137255, 0.152941, 0.176471, 1 )
 __meta__ = {
 "_edit_lock_": true,
@@ -28,15 +28,40 @@ __meta__ = {
 }
 
 [node name="ScrollingCredit" parent="." instance=ExtResource( 1 )]
+pause_mode = 2
+process_priority = 2
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="ReturnButton" type="TextureButton" parent="."]
 anchor_left = 0.022
 anchor_top = 0.839
 anchor_right = 0.022
 anchor_bottom = 0.839
+margin_right = 287.0
+margin_bottom = 90.0
 rect_scale = Vector2( 0.75, 0.75 )
+shortcut_in_tooltip = false
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="TextureButton" parent="."]
+anchor_left = 0.76
+anchor_top = 0.839
+anchor_right = 0.76
+anchor_bottom = 0.839
+margin_right = 287.0
+margin_bottom = 90.0
+rect_scale = Vector2( 0.75, 0.75 )
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="visibility_changed" from="." to="ScrollingCredit" method="_on_UserInterfaceCredit_visibility_changed"]
-[connection signal="pressed" from="TextureButton" to="ScrollingCredit" method="return_button"]
+[connection signal="pressed" from="ReturnButton" to="." method="ReturnButton_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="QuitButton_pressed"]
