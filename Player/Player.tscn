@@ -38,12 +38,13 @@ shape = SubResource( 1 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.311322, 0 )
 current = true
+near = 0.01
 far = 500.0
 script = ExtResource( 1 )
 mouse_sensitivity = 0.25
 
 [node name="Flashlight" parent="Camera" instance=ExtResource( 3 )]
-transform = Transform( 0.790735, -0.101548, 0.0665249, 0.110662, 0.783193, -0.119847, -0.0499145, 0.127661, 0.78817, 0.327, -0.268, -0.283 )
+transform = Transform( 0.049421, -0.00634675, 0.00415781, 0.00691638, 0.0489495, -0.00749041, -0.00311966, 0.00797881, 0.0492606, 0.024, -0.016, -0.02 )
 visible = false
 
 [node name="FootstepRandomSFXPlayer" type="AudioStreamPlayer" parent="."]
