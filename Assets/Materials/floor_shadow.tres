@@ -8,6 +8,6 @@ shader_param/blackIn = true
 shader_param/color = Color( 0.917647, 0.917647, 0.917647, 1 )
 shader_param/blackOut = true
 shader_param/torchIsOn = false
-shader_param/TransparentIn = null
+shader_param/TransparentIn = true
 shader_param/TransparentOut = true
 shader_param/effectIn = null

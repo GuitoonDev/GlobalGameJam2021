@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player/PlayerCamera.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerMove.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_01.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Assets/Audio/Foley/FPG_Foley_FTPS_OS_JumpEnd_01_02.ogg" type="AudioStream" id=18]
 [ext_resource path="res://Assets/graph/UI/interact_button_over.png" type="Texture" id=19]
+[ext_resource path="res://Assets/graph/UI/return_button_hover.png" type="Texture" id=20]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.25
@@ -46,7 +47,6 @@ mouse_sensitivity = 0.25
 
 [node name="Flashlight" parent="Camera" instance=ExtResource( 3 )]
 transform = Transform( 0.049421, -0.00634675, 0.00415781, 0.00691638, 0.0489495, -0.00749041, -0.00311966, 0.00797881, 0.0492606, 0.024, -0.016, -0.02 )
-visible = false
 
 [node name="FootstepRandomSFXPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 4 )
@@ -94,7 +94,8 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="Ebutton_cube"]
 visible = false
-texture = ExtResource( 19 )
+position = Vector2( -39, 0 )
+texture = ExtResource( 20 )
 offset = Vector2( 512, 500 )
 
 [node name="CheatTeleport" type="Spatial" parent="."]

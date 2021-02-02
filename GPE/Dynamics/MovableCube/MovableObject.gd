@@ -33,9 +33,11 @@ func Interact(p):
 
 func _on_EBox_body_entered(body):
 	if body.is_in_group("Player"):
-		body.show_ERbutton()
-		
-		
+		if needTorchOn:
+			if body.torch_is_On:
+				body.show_ERbutton()
+		else:
+			body.show_ERbutton()
 
 
 func _on_SnapPoint(x, z):
