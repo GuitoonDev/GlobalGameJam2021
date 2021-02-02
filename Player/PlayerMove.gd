@@ -13,6 +13,8 @@ onready var cheat_transform = $CheatTeleport.global_transform.origin
 const GRAVITY := 0.75
 
 export var canUse_torch = false;
+export var canCheat = false;
+
 var torch_is_On = false;
 var is_grounded_last_frame := false;
 var cancelGravity = false;
@@ -39,8 +41,8 @@ func _process(_delta):
 		$flash_off.play()
 		torch_is_On = false;
 		emit_signal("toggle_torch",torch_is_On,self)
-	#if Input.is_action_just_released("dev_cheat"):
-		#global_transform.origin = cheat_transform
+	if Input.is_action_just_released("dev_cheat") and canCheat:
+		global_transform.origin = cheat_transform
 	
 
 func _physics_process(_delta) -> void:
@@ -59,9 +61,9 @@ func _physics_process(_delta) -> void:
 
 	move_delta = move_delta.normalized()
 	
-	if move_delta != Vector3.ZERO and not footstep_sfx_player.is_playing and grounded:
+	if move_delta.length() >= 0.5 and not footstep_sfx_player.is_playing and grounded:
 		footstep_sfx_player.play()
-	elif move_delta == Vector3.ZERO:
+	elif move_delta.length() < 0.5:
 		footstep_sfx_player.stop()
 		
 	

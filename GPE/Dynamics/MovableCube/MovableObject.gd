@@ -34,3 +34,11 @@ func Interact(p):
 func _on_EBox_body_entered(body):
 	if body.is_in_group("Player"):
 		body.show_ERbutton()
+		
+		
+
+
+func _on_SnapPoint(x, z):
+	global_translate(Vector3(x, global_transform.origin.y,z))
+	#global_transform.origin.x = x
+	#global_transform.origin.z = z

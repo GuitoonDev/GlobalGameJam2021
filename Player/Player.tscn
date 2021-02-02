@@ -45,7 +45,6 @@ mouse_sensitivity = 0.25
 
 [node name="Flashlight" parent="Camera" instance=ExtResource( 3 )]
 transform = Transform( 0.790735, -0.101548, 0.0665249, 0.110662, 0.783193, -0.119847, -0.0499145, 0.127661, 0.78817, 0.327, -0.268, -0.283 )
-visible = false
 
 [node name="FootstepRandomSFXPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 4 )
@@ -97,3 +96,7 @@ texture = ExtResource( 19 )
 offset = Vector2( 512, 500 )
 
 [node name="CheatTeleport" type="Spatial" parent="."]
+
+[editable path="Camera/Flashlight"]
+
+[editable path="Camera/Flashlight/torch"]
