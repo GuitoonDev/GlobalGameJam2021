@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FPG_FDBK_PushCube_LP_01_01.ogg-ba7f119da5fbe02e8c952
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

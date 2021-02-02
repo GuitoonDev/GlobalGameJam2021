@@ -31,7 +31,7 @@ func Interact(p):
 			Deactivate();
 		else:
 			Activate();
-			
+
 func Deactivate():
 	activated = false;
 	pass
@@ -39,3 +39,10 @@ func Deactivate():
 func Activate():
 	activated = true;
 	pass
+
+func showE(p):
+	p.show_Ebutton();
+
+func _on_Area_body_entered(body):
+	if body.is_in_group("Player"):
+		showE(body);

@@ -16,6 +16,6 @@ func connect_to_player():
 #func _process(delta):
 #	pass
 
-func toggleTorch(isOn):
+func toggleTorch(isOn,p):
 	for mat in lampMaterials:
 		mat.set("shader_param/torchIsOn",isOn)
