@@ -16,6 +16,8 @@ extents = Vector3( 0.25, 0.025, 0.25 )
 extents = Vector3( 0.5, 0.5, 0.5 )
 
 [node name="MovableObject" type="RigidBody"]
+collision_layer = 5
+collision_mask = 5
 mass = 11.86
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
@@ -34,8 +36,8 @@ __meta__ = {
 }
 
 [node name="StaticBody" type="StaticBody" parent="CollisionShape"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 10
+collision_mask = 10
 
 [node name="CollisionShape" type="CollisionShape" parent="CollisionShape/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.133634, 0 )
